@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS - Internet Terminology</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f0f4f8; color: #333; }
+        header { background: #1a3c5e; color: white; padding: 30px; text-align: center; }
+        header h1 { font-size: 2.5em; }
+        nav { background: #2d6a9f; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 8px; display: inline-block; background: #1a3c5e; padding: 8px 14px; border-radius: 5px; font-size: 0.9em; }
+        nav a:hover { background: #f0a500; }
+        .content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .content h2 { font-size: 2em; color: #1a3c5e; margin-bottom: 15px; }
+        .content p { font-size: 1.05em; line-height: 1.8; margin-bottom: 15px; }
+        .content ul { margin: 10px 0 15px 25px; }
+        .content ul li { margin-bottom: 8px; line-height: 1.7; }
+        .highlight { background: #e8f0fe; border-left: 4px solid #2d6a9f; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .img-box { text-align: center; margin: 30px 0; }
+        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        footer { background: #1a3c5e; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🔍 DNS</h1>
+        <p>Domain Name System / Domain Name Server</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="www.html">WWW</a>
+        <a href="tcp-ip.html">TCP/IP</a>
+        <a href="web-browsers.html">Web Browsers</a>
+        <a href="web-servers.html">Web Servers</a>
+        <a href="url.html">URL</a>
+        <a href="dns.html">DNS</a>
+        <a href="http.html">HTTP</a>
+        <a href="intranet.html">Intranet</a>
+        <a href="extranet.html">Extranet</a>
+        <a href="multitier.html">Multitier</a>
+        <a href="ftp.html">FTP</a>
+        <a href="html-term.html">HTML</a>
+        <a href="web1.html">Web 1.0</a>
+        <a href="web2.html">Web 2.0</a>
+        <a href="web3.html">Web 3.0</a>
+        <a href="web4.html">Web 4.0</a>
+    </nav>
+    <div class="content">
+        <h2>What is DNS?</h2>
+        <p><strong>DNS (Domain Name System)</strong> is often called the "phonebook of the internet." It translates human-friendly domain names (like www.google.com) into machine-readable IP addresses (like 142.250.190.46) that computers use to find each other.</p>
+        <div class="highlight">
+            <strong>Key Fact:</strong> Without DNS, you would have to remember long strings of numbers (IP addresses) for every website you want to visit.
+        </div>
+        <div class="img-box">
+            <img src="images/dns.jpg" alt="DNS resolution diagram">
+            <p>DNS servers work behind the scenes every time you type a web address.</p>
+        </div>
+        <h2>How DNS Works (Step by Step)</h2>
+        <ol>
+            <li>You type <code>www.example.com</code> into your browser.</li>
+            <li>Your computer asks a DNS resolver (usually provided by your ISP or a public DNS like 8.8.8.8).</li>
+            <li>The resolver checks its cache; if not found, it queries root name servers.</li>
+            <li>Root servers point to Top-Level Domain (TLD) servers (e.g., .com, .org).</li>
+            <li>TLD servers point to authoritative name servers for the specific domain.</li>
+            <li>The authoritative server returns the IP address for <code>example.com</code>.</li>
+            <li>Your browser then connects to that IP address and loads the website.</li>
+        </ol>
+        <h2>Types of DNS Servers</h2>
+        <ul>
+            <li><strong>DNS Resolver (Recursive Resolver):</strong> Handles the client's request and does the legwork to find the IP.</li>
+            <li><strong>Root Name Server:</strong> The top of the DNS hierarchy (13 logical root servers worldwide).</li>
+            <li><strong>TLD Name Server:</strong> Manages domains for specific extensions (.com, .org, .uk).</li>
+            <li><strong>Authoritative Name Server:</strong> The final source of truth for a domain's IP address.</li>
+        </ul>
+        <h2>Common DNS Record Types</h2>
+        <ul>
+            <li><strong>A Record:</strong> Maps a domain to an IPv4 address.</li>
+            <li><strong>AAAA Record:</strong> Maps a domain to an IPv6 address.</li>
+            <li><strong>CNAME Record:</strong> Aliases one domain to another (e.g., www.example.com → example.com).</li>
+            <li><strong>MX Record:</strong> Specifies mail servers for email delivery.</li>
+            <li><strong>TXT Record:</strong> Holds text information (often for verification or security).</li>
+            <li><strong>NS Record:</strong> Indicates which name servers are authoritative for the domain.</li>
+        </ul>
+        <h2>Public DNS Providers vs. ISP Default</h2>
+        <p>Many people use public DNS for speed and privacy: <strong>Google DNS (8.8.8.8, 8.8.4.4)</strong>, <strong>Cloudflare DNS (1.1.1.1)</strong>, <strong>OpenDNS</strong>. They can be faster and more reliable than your ISP's default DNS.</p>
+        <h2>DNS Security Threats</h2>
+        <ul>
+            <li><strong>DNS Spoofing / Cache Poisoning:</strong> Attackers inject false DNS records to redirect users to fake sites.</li>
+            <li><strong>DNS Tunneling:</strong> Hiding non-DNS traffic inside DNS queries to bypass firewalls.</li>
+            <li><strong>DNSSEC (Domain Name System Security Extensions):</strong> A security protocol that signs DNS records to verify authenticity.</li>
+        </ul>
+        <p>Without DNS, the internet as we know it would be impossible to use. It's one of the most critical but invisible components of online life.</p>
+    </div>
+    <footer>
+        <p>Internet Terminology Project &copy; 2026</p>
+    </footer>
+</body>
+</html>
