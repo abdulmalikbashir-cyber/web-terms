@@ -6,27 +6,29 @@
     <title>Extranet - Internet Terminology</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background: #f0f4f8; color: #333; }
-        header { background: #1a3c5e; color: white; padding: 30px; text-align: center; }
+        body { font-family: Arial, sans-serif; background: #fdf3f0; color: #2c2c2a; }
+        header { background: #712b13; color: white; padding: 30px; text-align: center; }
         header h1 { font-size: 2.5em; }
-        nav { background: #2d6a9f; padding: 15px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 8px; display: inline-block; background: #1a3c5e; padding: 8px 14px; border-radius: 5px; font-size: 0.9em; }
-        nav a:hover { background: #f0a500; }
+        header p { margin-top: 6px; font-size: 1em; opacity: 0.85; }
+        nav { background: #993c1d; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 6px; display: inline-block; background: #712b13; padding: 8px 14px; border-radius: 5px; font-size: 0.85em; }
+        nav a:hover { background: #ef9f27; color: #2c2c2a; }
         .content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        .content h2 { font-size: 2em; color: #1a3c5e; margin-bottom: 15px; }
+        .content h2 { font-size: 1.7em; color: #712b13; margin: 30px 0 12px; }
         .content p { font-size: 1.05em; line-height: 1.8; margin-bottom: 15px; }
-        .content ul { margin: 10px 0 15px 25px; }
-        .content ul li { margin-bottom: 8px; line-height: 1.7; }
-        .highlight { background: #e8f0fe; border-left: 4px solid #2d6a9f; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .content ul, .content ol { margin: 10px 0 15px 25px; }
+        .content li { margin-bottom: 8px; line-height: 1.7; }
+        .highlight { background: #faece7; border-left: 4px solid #993c1d; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
         .img-box { text-align: center; margin: 30px 0; }
-        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        footer { background: #1a3c5e; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+        .img-box p { margin-top: 10px; font-size: 0.9em; color: #5f5e5a; }
+        footer { background: #712b13; color: white; text-align: center; padding: 20px; margin-top: 40px; }
     </style>
 </head>
 <body>
     <header>
-        <h1>🔐 Extranet</h1>
-        <p>Extending the Intranet to Trusted Partners</p>
+        <h1>&#128274; Extranet</h1>
+        <p>Extending Access to Trusted External Users</p>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -35,6 +37,7 @@
         <a href="web-browsers.html">Web Browsers</a>
         <a href="web-servers.html">Web Servers</a>
         <a href="url.html">URL</a>
+        <a href="dns.html">DNS</a>
         <a href="http.html">HTTP</a>
         <a href="intranet.html">Intranet</a>
         <a href="extranet.html">Extranet</a>
@@ -46,34 +49,50 @@
         <a href="web3.html">Web 3.0</a>
         <a href="web4.html">Web 4.0</a>
     </nav>
+
     <div class="content">
         <h2>What is an Extranet?</h2>
-        <p>An <strong>extranet</strong> is a controlled private network that allows external partners, suppliers, vendors, or customers to access specific parts of an organization's intranet. It's like giving a key to trusted outsiders.</p>
+        <p>An <strong>extranet</strong> is a private network that allows authorized external users — such as suppliers, customers, or business partners — to access part of an organization's intranet. It is not open to the general public, but it is not purely internal either. It sits in between.</p>
+        <p>The key idea is controlled access. A company can decide exactly which parts of their internal network an outsider is allowed to see, and block everything else. Access is always restricted through security methods like usernames, passwords, or encrypted connections.</p>
+
         <div class="highlight">
-            <strong>Key Difference:</strong> Intranet = internal only. Extranet = internal + select external users.
+            <strong>Easy way to remember:</strong> Intranet = internal users only. Extranet = internal network + selected trusted outsiders given limited access.
         </div>
+
         <div class="img-box">
             <img src="images/extranet.jpg" alt="Extranet connection diagram">
-            <p>Extranets enable secure collaboration with outside partners.</p>
+            <p>An extranet allows a company to securely share specific information with external partners without opening up their entire internal network.</p>
         </div>
-        <h2>Common Uses of an Extranet</h2>
+
+        <h2>What is an Extranet Used For?</h2>
+        <p>Organizations use extranets when they need to share information with people outside the company but still want to keep that sharing controlled and secure. Common uses include:</p>
         <ul>
-            <li>Supply chain management portals (suppliers check inventory).</li>
-            <li>Customer support systems (clients submit tickets).</li>
-            <li>Partner collaboration platforms (share documents securely).</li>
-            <li>Vendor portals (submit invoices, track orders).</li>
-            <li>Distributor price lists and ordering systems.</li>
+            <li>Allowing suppliers to check stock levels or submit invoices.</li>
+            <li>Letting customers track their orders or submit support requests.</li>
+            <li>Sharing documents securely with business partners.</li>
+            <li>Giving distributors access to price lists and ordering systems.</li>
+            <li>Collaborating on projects with external contractors.</li>
         </ul>
-        <h2>Security Measures for Extranets</h2>
+
+        <h2>How Access is Controlled</h2>
+        <p>Because the extranet connects to outside users, security is very important. Organizations use several methods to control who gets in:</p>
         <ul>
-            <li><strong>Firewalls:</strong> Restrict access to only authorized external IPs.</li>
-            <li><strong>VPN (Virtual Private Network):</strong> Encrypted tunnel for remote users.</li>
-            <li><strong>Two-Factor Authentication (2FA):</strong> Extra login verification.</li>
-            <li><strong>Role-based access control (RBAC):</strong> Partners see only what they need.</li>
+            <li><strong>Usernames and passwords</strong> — only people with valid login details can enter.</li>
+            <li><strong>Firewalls</strong> — block unauthorized access attempts from the outside.</li>
+            <li><strong>VPN (Virtual Private Network)</strong> — creates an encrypted tunnel so data cannot be intercepted.</li>
+            <li><strong>Two-Factor Authentication (2FA)</strong> — adds a second step to the login process for extra security.</li>
+            <li><strong>Role-based access</strong> — each external user only sees the specific parts they are permitted to access.</li>
         </ul>
+
+        <h2>Technologies Used</h2>
+        <p>Like the intranet, an extranet uses standard internet technologies such as TCP/IP and web browsers. The difference is that it extends access beyond the organization's physical network using secure internet connections.</p>
+
         <h2>Real-World Example</h2>
-        <p>Walmart uses an extranet to connect with thousands of suppliers. Suppliers log in to check demand forecasts, submit shipping notices, and invoice Walmart – all without accessing Walmart's internal employee systems.</p>
+        <p>A large retailer might give its suppliers access to an extranet where they can log in, see current stock levels, and submit delivery confirmations. The suppliers only see what is relevant to them — they cannot access the retailer's internal employee systems or financial records.</p>
+
+        <p>In short, an extranet is a practical solution for organizations that need to collaborate with outsiders without compromising the security of their internal network.</p>
     </div>
+
     <footer>
         <p>Internet Terminology Project &copy; 2026</p>
     </footer>
