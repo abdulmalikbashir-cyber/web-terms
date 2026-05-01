@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-tier Architecture - Internet Terminology</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f0f4f8; color: #333; }
+        header { background: #1a3c5e; color: white; padding: 30px; text-align: center; }
+        header h1 { font-size: 2.5em; }
+        nav { background: #2d6a9f; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 8px; display: inline-block; background: #1a3c5e; padding: 8px 14px; border-radius: 5px; font-size: 0.9em; }
+        nav a:hover { background: #f0a500; }
+        .content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .content h2 { font-size: 2em; color: #1a3c5e; margin-bottom: 15px; }
+        .content p { font-size: 1.05em; line-height: 1.8; margin-bottom: 15px; }
+        .content ul { margin: 10px 0 15px 25px; }
+        .content ul li { margin-bottom: 8px; line-height: 1.7; }
+        .highlight { background: #e8f0fe; border-left: 4px solid #2d6a9f; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .img-box { text-align: center; margin: 30px 0; }
+        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        footer { background: #1a3c5e; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏗️ Multi-tier Architecture</h1>
+        <p>N-Tier Application Design</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="www.html">WWW</a>
+        <a href="tcp-ip.html">TCP/IP</a>
+        <a href="web-browsers.html">Web Browsers</a>
+        <a href="web-servers.html">Web Servers</a>
+        <a href="url.html">URL</a>
+        <a href="http.html">HTTP</a>
+        <a href="intranet.html">Intranet</a>
+        <a href="extranet.html">Extranet</a>
+        <a href="multitier.html">Multitier</a>
+        <a href="ftp.html">FTP</a>
+        <a href="html-term.html">HTML</a>
+        <a href="web1.html">Web 1.0</a>
+        <a href="web2.html">Web 2.0</a>
+        <a href="web3.html">Web 3.0</a>
+        <a href="web4.html">Web 4.0</a>
+    </nav>
+    <div class="content">
+        <h2>What is Multi-tier Architecture?</h2>
+        <p><strong>Multi-tier architecture</strong> (often called n-tier architecture) is a client-server design pattern that separates an application into logical layers (tiers). Each tier has a specific responsibility, making the system more organized, scalable, and secure.</p>
+        <div class="highlight">
+            <strong>Key Fact:</strong> Most modern web applications use a 3-tier architecture: Presentation, Application/Logic, and Data.
+        </div>
+        <div class="img-box">
+            <img src="images/multitier.jpg" alt="3-tier architecture diagram">
+            <p>The 3-tier model separates user interface, business logic, and data storage.</p>
+        </div>
+        <h2>The Three Main Tiers</h2>
+        <ul>
+            <li><strong>Presentation Tier (User Interface):</strong> The web browser, mobile app, or desktop UI that users interact with. It sends requests and displays results.</li>
+            <li><strong>Application Tier (Business Logic):</strong> The middle layer that processes requests, applies rules, and coordinates data. Often runs on a web server or application server (e.g., Java, Node.js, Python).</li>
+            <li><strong>Data Tier (Database):</strong> Where information is stored and retrieved. Examples: MySQL, PostgreSQL, MongoDB.</li>
+        </ul>
+        <h2>Benefits of Multi-tier Architecture</h2>
+        <ul>
+            <li><strong>Scalability:</strong> You can scale each tier independently (e.g., add more application servers without touching the database).</li>
+            <li><strong>Security:</strong> The data tier can be hidden from direct user access.</li>
+            <li><strong>Maintainability:</strong> Changes to one tier don't break the others.</li>
+            <li><strong>Reusability:</strong> The same business logic can serve different clients (web, mobile, API).</li>
+        </ul>
+        <h2>Real-World Example</h2>
+        <p>When you log into Amazon:</p>
+        <ul>
+            <li><strong>Presentation:</strong> Your browser shows the login form.</li>
+            <li><strong>Application:</strong> Amazon's servers check your password and create a session.</li>
+            <li><strong>Data:</strong> The database stores your encrypted password and user profile.</li>
+        </ul>
+    </div>
+    <footer>
+        <p>Internet Terminology Project &copy; 2026</p>
+    </footer>
+</body>
+</html>
