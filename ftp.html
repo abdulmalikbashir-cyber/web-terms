@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTP - Internet Terminology</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f0f4f8; color: #333; }
+        header { background: #1a3c5e; color: white; padding: 30px; text-align: center; }
+        header h1 { font-size: 2.5em; }
+        nav { background: #2d6a9f; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 8px; display: inline-block; background: #1a3c5e; padding: 8px 14px; border-radius: 5px; font-size: 0.9em; }
+        nav a:hover { background: #f0a500; }
+        .content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .content h2 { font-size: 2em; color: #1a3c5e; margin-bottom: 15px; }
+        .content p { font-size: 1.05em; line-height: 1.8; margin-bottom: 15px; }
+        .content ul { margin: 10px 0 15px 25px; }
+        .content ul li { margin-bottom: 8px; line-height: 1.7; }
+        .highlight { background: #e8f0fe; border-left: 4px solid #2d6a9f; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .img-box { text-align: center; margin: 30px 0; }
+        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        footer { background: #1a3c5e; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📁 FTP</h1>
+        <p>File Transfer Protocol</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="www.html">WWW</a>
+        <a href="tcp-ip.html">TCP/IP</a>
+        <a href="web-browsers.html">Web Browsers</a>
+        <a href="web-servers.html">Web Servers</a>
+        <a href="url.html">URL</a>
+        <a href="http.html">HTTP</a>
+        <a href="intranet.html">Intranet</a>
+        <a href="extranet.html">Extranet</a>
+        <a href="multitier.html">Multitier</a>
+        <a href="ftp.html">FTP</a>
+        <a href="html-term.html">HTML</a>
+        <a href="web1.html">Web 1.0</a>
+        <a href="web2.html">Web 2.0</a>
+        <a href="web3.html">Web 3.0</a>
+        <a href="web4.html">Web 4.0</a>
+    </nav>
+    <div class="content">
+        <h2>What is FTP?</h2>
+        <p><strong>FTP (File Transfer Protocol)</strong> is a standard network protocol used to transfer files between a client and a server on a computer network. It's one of the oldest internet protocols, predating the World Wide Web.</p>
+        <div class="highlight">
+            <strong>Key Fact:</strong> FTP uses two separate channels: a command channel (port 21) and a data channel (port 20) for transferring files.
+        </div>
+        <div class="img-box">
+            <img src="images/ftp.jpg" alt="FTP file transfer diagram">
+            <p>FTP is commonly used for uploading website files to hosting servers.</p>
+        </div>
+        <h2>Common Uses of FTP</h2>
+        <ul>
+            <li>Uploading website files (HTML, CSS, images) to a web host.</li>
+            <li>Downloading large files from public FTP servers (software, datasets).</li>
+            <li>Backing up data to remote servers automatically.</li>
+            <li>Sharing large files with colleagues (though less common now).</li>
+        </ul>
+        <h2>FTP Modes: Active vs. Passive</h2>
+        <ul>
+            <li><strong>Active FTP:</strong> The client opens a port and the server connects to it. Can face firewall issues.</li>
+            <li><strong>Passive FTP:</strong> The server tells the client which port to connect to; better for firewalls and NAT.</li>
+        </ul>
+        <h2>Security: FTP vs. SFTP vs. FTPS</h2>
+        <ul>
+            <li><strong>FTP:</strong> No encryption – passwords and files are sent in plain text. NOT secure.</li>
+            <li><strong>FTPS (FTP Secure):</strong> Adds SSL/TLS encryption to FTP.</li>
+            <li><strong>SFTP (SSH File Transfer Protocol):</strong> A completely different, secure protocol over SSH (port 22).</li>
+        </ul>
+        <p>Today, for security, you should use SFTP or FTPS instead of plain FTP, especially when transferring sensitive data.</p>
+    </div>
+    <footer>
+        <p>Internet Terminology Project &copy; 2026</p>
+    </footer>
+</body>
+</html>
