@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP - Internet Terminology</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f0f4f8; color: #333; }
+        header { background: #1a3c5e; color: white; padding: 30px; text-align: center; }
+        header h1 { font-size: 2.5em; }
+        nav { background: #2d6a9f; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 8px; display: inline-block; background: #1a3c5e; padding: 8px 14px; border-radius: 5px; font-size: 0.9em; }
+        nav a:hover { background: #f0a500; }
+        .content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .content h2 { font-size: 2em; color: #1a3c5e; margin-bottom: 15px; }
+        .content p { font-size: 1.05em; line-height: 1.8; margin-bottom: 15px; }
+        .content ul { margin: 10px 0 15px 25px; }
+        .content ul li { margin-bottom: 8px; line-height: 1.7; }
+        .highlight { background: #e8f0fe; border-left: 4px solid #2d6a9f; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .img-box { text-align: center; margin: 30px 0; }
+        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        footer { background: #1a3c5e; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌐 HTTP</h1>
+        <p>Hypertext Transfer Protocol</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="www.html">WWW</a>
+        <a href="tcp-ip.html">TCP/IP</a>
+        <a href="web-browsers.html">Web Browsers</a>
+        <a href="web-servers.html">Web Servers</a>
+        <a href="url.html">URL</a>
+        <a href="http.html">HTTP</a>
+        <a href="intranet.html">Intranet</a>
+        <a href="extranet.html">Extranet</a>
+        <a href="multitier.html">Multitier</a>
+        <a href="ftp.html">FTP</a>
+        <a href="html-term.html">HTML</a>
+        <a href="web1.html">Web 1.0</a>
+        <a href="web2.html">Web 2.0</a>
+        <a href="web3.html">Web 3.0</a>
+        <a href="web4.html">Web 4.0</a>
+    </nav>
+    <div class="content">
+        <h2>What is HTTP?</h2>
+        <p><strong>HTTP (Hypertext Transfer Protocol)</strong> is the set of rules that web browsers and servers use to communicate. It's the foundation of data exchange on the World Wide Web.</p>
+        <div class="highlight">
+            <strong>HTTPS = HTTP + SSL/TLS encryption.</strong> Always look for "https://" in your address bar – it means your connection is secure.
+        </div>
+        <div class="img-box">
+            <img src="images/http.jpg" alt="HTTP request/response cycle">
+            <p>HTTP works as a request-response protocol between client (browser) and server.</p>
+        </div>
+        <h2>HTTP Request Methods</h2>
+        <ul>
+            <li><strong>GET:</strong> Request data from the server (e.g., loading a webpage).</li>
+            <li><strong>POST:</strong> Submit data to the server (e.g., form submission).</li>
+            <li><strong>PUT:</strong> Update an existing resource.</li>
+            <li><strong>DELETE:</strong> Remove a resource.</li>
+        </ul>
+        <h2>Common HTTP Status Codes</h2>
+        <ul>
+            <li><strong>200 OK:</strong> The request succeeded.</li>
+            <li><strong>301 Moved Permanently:</strong> The page has moved to a new URL.</li>
+            <li><strong>403 Forbidden:</strong> Access denied.</li>
+            <li><strong>404 Not Found:</strong> The requested resource doesn't exist.</li>
+            <li><strong>500 Internal Server Error:</strong> The server encountered an error.</li>
+        </ul>
+        <h2>HTTP vs. HTTPS</h2>
+        <p>HTTPS encrypts data between your browser and the server, protecting it from eavesdropping. Always use HTTPS for sensitive info like passwords or credit cards.</p>
+    </div>
+    <footer>
+        <p>Internet Terminology Project &copy; 2026</p>
+    </footer>
+</body>
+</html>
