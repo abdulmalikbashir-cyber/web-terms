@@ -6,26 +6,28 @@
     <title>Intranet - Internet Terminology</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background: #f0f4f8; color: #333; }
-        header { background: #1a3c5e; color: white; padding: 30px; text-align: center; }
+        body { font-family: Arial, sans-serif; background: #f0faf6; color: #2c2c2a; }
+        header { background: #085041; color: white; padding: 30px; text-align: center; }
         header h1 { font-size: 2.5em; }
-        nav { background: #2d6a9f; padding: 15px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 8px; display: inline-block; background: #1a3c5e; padding: 8px 14px; border-radius: 5px; font-size: 0.9em; }
-        nav a:hover { background: #f0a500; }
+        header p { margin-top: 6px; font-size: 1em; opacity: 0.85; }
+        nav { background: #0f6e56; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 6px; display: inline-block; background: #085041; padding: 8px 14px; border-radius: 5px; font-size: 0.85em; }
+        nav a:hover { background: #ef9f27; color: #2c2c2a; }
         .content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        .content h2 { font-size: 2em; color: #1a3c5e; margin-bottom: 15px; }
+        .content h2 { font-size: 1.7em; color: #085041; margin: 30px 0 12px; }
         .content p { font-size: 1.05em; line-height: 1.8; margin-bottom: 15px; }
-        .content ul { margin: 10px 0 15px 25px; }
-        .content ul li { margin-bottom: 8px; line-height: 1.7; }
-        .highlight { background: #e8f0fe; border-left: 4px solid #2d6a9f; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .content ul, .content ol { margin: 10px 0 15px 25px; }
+        .content li { margin-bottom: 8px; line-height: 1.7; }
+        .highlight { background: #e1f5ee; border-left: 4px solid #0f6e56; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
         .img-box { text-align: center; margin: 30px 0; }
-        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        footer { background: #1a3c5e; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+        .img-box p { margin-top: 10px; font-size: 0.9em; color: #5f5e5a; }
+        footer { background: #085041; color: white; text-align: center; padding: 20px; margin-top: 40px; }
     </style>
 </head>
 <body>
     <header>
-        <h1>🏢 Intranet</h1>
+        <h1>&#127970; Intranet</h1>
         <p>Private Network for Organizations</p>
     </header>
     <nav>
@@ -35,6 +37,7 @@
         <a href="web-browsers.html">Web Browsers</a>
         <a href="web-servers.html">Web Servers</a>
         <a href="url.html">URL</a>
+        <a href="dns.html">DNS</a>
         <a href="http.html">HTTP</a>
         <a href="intranet.html">Intranet</a>
         <a href="extranet.html">Extranet</a>
@@ -46,34 +49,55 @@
         <a href="web3.html">Web 3.0</a>
         <a href="web4.html">Web 4.0</a>
     </nav>
+
     <div class="content">
         <h2>What is an Intranet?</h2>
-        <p>An <strong>intranet</strong> is a private computer network that uses internet technologies but is accessible only to an organization's members, employees, or authorized users. It's like an internal, private version of the web for a company or school.</p>
+        <p>An <strong>intranet</strong> is a private network that is used within an organization. Think of it like a mini version of the internet, but it is only for the people inside that organization — employees, students, or other authorized users. Nobody outside can just open a browser and get in.</p>
+        <p>Even though it is private, an intranet still uses the same technologies we use on the internet, like web browsers and TCP/IP. The difference is that access is restricted and protected so that only the right people can use it.</p>
+
         <div class="highlight">
-            <strong>Key Difference:</strong> The internet is public; an intranet is private and protected by firewalls.
+            <strong>Simple way to remember it:</strong> The internet is open to everyone. An intranet is a closed, internal version that only authorized users inside an organization can access.
         </div>
+
         <div class="img-box">
             <img src="images/intranet.jpg" alt="Intranet network diagram">
-            <p>Intranets improve internal communication and collaboration.</p>
+            <p>An intranet connects people within an organization securely, without exposing information to the public internet.</p>
         </div>
-        <h2>Common Uses of an Intranet</h2>
+
+        <h2>What is an Intranet Used For?</h2>
+        <p>Organizations use intranets to make internal communication and information sharing much easier. Some common uses include:</p>
         <ul>
-            <li>Internal company announcements and news.</li>
-            <li>Employee directories and HR portals.</li>
-            <li>Document management and file sharing.</li>
-            <li>Internal wikis and knowledge bases.</li>
-            <li>Project management tools and dashboards.</li>
+            <li>Posting internal notices and company announcements.</li>
+            <li>Sharing documents and files between departments.</li>
+            <li>Giving employees access to company resources like HR forms and policies.</li>
+            <li>Internal email and messaging between staff.</li>
+            <li>Project management tools that teams use to track their work.</li>
+            <li>Employee directories so staff can find and contact each other.</li>
         </ul>
+
+        <h2>Technologies Used in an Intranet</h2>
+        <p>An intranet is built using the same technologies as the internet. This includes:</p>
+        <ul>
+            <li><strong>Web browsers</strong> — employees use a normal browser like Chrome or Edge to access the intranet.</li>
+            <li><strong>TCP/IP</strong> — the networking rules that allow data to travel across the internal network.</li>
+            <li><strong>Firewalls</strong> — security systems that block outsiders from accessing the private network.</li>
+            <li><strong>Login systems</strong> — usernames and passwords to make sure only authorized users get in.</li>
+        </ul>
+
         <h2>Benefits of an Intranet</h2>
         <ul>
-            <li><strong>Security:</strong> Only authorized users can access sensitive data.</li>
-            <li><strong>Efficiency:</strong> Centralized information reduces email clutter.</li>
-            <li><strong>Collaboration:</strong> Teams can share files and communicate easily.</li>
-            <li><strong>Cost-effective:</strong> Uses existing web technologies.</li>
+            <li><strong>Security:</strong> Sensitive company information stays private and protected.</li>
+            <li><strong>Better communication:</strong> Staff can share information quickly without relying on long email chains.</li>
+            <li><strong>Efficiency:</strong> Everything employees need is in one place, saving time.</li>
+            <li><strong>Cost-effective:</strong> It uses existing web technologies so it does not require expensive new systems.</li>
         </ul>
+
         <h2>Real-World Example</h2>
-        <p>Many companies use Microsoft SharePoint or custom intranet portals where employees check schedules, download forms, and read internal news – all without going on the public internet.</p>
+        <p>A university might run an intranet where students and lecturers log in to access course materials, submit assignments, check timetables, and communicate — all without that information being visible to the general public on the internet.</p>
+
+        <p>In short, an intranet gives organizations a safe, controlled space to share information and communicate internally without exposing anything to the outside world.</p>
     </div>
+
     <footer>
         <p>Internet Terminology Project &copy; 2026</p>
     </footer>
