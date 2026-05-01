@@ -6,27 +6,29 @@
     <title>HTTP - Internet Terminology</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background: #f0f4f8; color: #333; }
-        header { background: #1a3c5e; color: white; padding: 30px; text-align: center; }
+        body { font-family: Arial, sans-serif; background: #fdf8f0; color: #2c2c2a; }
+        header { background: #633806; color: white; padding: 30px; text-align: center; }
         header h1 { font-size: 2.5em; }
-        nav { background: #2d6a9f; padding: 15px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 8px; display: inline-block; background: #1a3c5e; padding: 8px 14px; border-radius: 5px; font-size: 0.9em; }
-        nav a:hover { background: #f0a500; }
+        header p { margin-top: 6px; font-size: 1em; opacity: 0.85; }
+        nav { background: #854f0b; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 6px; display: inline-block; background: #633806; padding: 8px 14px; border-radius: 5px; font-size: 0.85em; }
+        nav a:hover { background: #1d9e75; color: white; }
         .content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        .content h2 { font-size: 2em; color: #1a3c5e; margin-bottom: 15px; }
+        .content h2 { font-size: 1.7em; color: #633806; margin: 30px 0 12px; }
         .content p { font-size: 1.05em; line-height: 1.8; margin-bottom: 15px; }
-        .content ul { margin: 10px 0 15px 25px; }
-        .content ul li { margin-bottom: 8px; line-height: 1.7; }
-        .highlight { background: #e8f0fe; border-left: 4px solid #2d6a9f; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .content ul, .content ol { margin: 10px 0 15px 25px; }
+        .content li { margin-bottom: 8px; line-height: 1.7; }
+        .highlight { background: #faeeda; border-left: 4px solid #854f0b; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
         .img-box { text-align: center; margin: 30px 0; }
-        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        footer { background: #1a3c5e; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+        .img-box p { margin-top: 10px; font-size: 0.9em; color: #5f5e5a; }
+        footer { background: #633806; color: white; text-align: center; padding: 20px; margin-top: 40px; }
     </style>
 </head>
 <body>
     <header>
-        <h1>🌐 HTTP</h1>
-        <p>Hypertext Transfer Protocol</p>
+        <h1>&#127760; HTTP</h1>
+        <p>HyperText Transfer Protocol</p>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -35,6 +37,7 @@
         <a href="web-browsers.html">Web Browsers</a>
         <a href="web-servers.html">Web Servers</a>
         <a href="url.html">URL</a>
+        <a href="dns.html">DNS</a>
         <a href="http.html">HTTP</a>
         <a href="intranet.html">Intranet</a>
         <a href="extranet.html">Extranet</a>
@@ -46,34 +49,62 @@
         <a href="web3.html">Web 3.0</a>
         <a href="web4.html">Web 4.0</a>
     </nav>
+
     <div class="content">
         <h2>What is HTTP?</h2>
-        <p><strong>HTTP (Hypertext Transfer Protocol)</strong> is the set of rules that web browsers and servers use to communicate. It's the foundation of data exchange on the World Wide Web.</p>
+        <p><strong>HTTP</strong> stands for <strong>HyperText Transfer Protocol</strong>. It is the protocol — meaning the set of rules — that is used to transfer web pages over the internet. Every time you open a website, HTTP is what makes the communication between your browser and the web server possible.</p>
+        <p>In simple terms, HTTP is what allows your browser to ask for a web page and the server to send it back to you. Without HTTP, web browsers and web servers would have no common language to communicate with each other.</p>
+
         <div class="highlight">
-            <strong>HTTPS = HTTP + SSL/TLS encryption.</strong> Always look for "https://" in your address bar – it means your connection is secure.
+            <strong>Key point:</strong> HTTP follows a request-and-response process. Your browser sends a request, and the server sends back a response. This happens every time you visit a website.
         </div>
+
         <div class="img-box">
-            <img src="images/http.jpg" alt="HTTP request/response cycle">
-            <p>HTTP works as a request-response protocol between client (browser) and server.</p>
+            <img src="images/http.jpg" alt="HTTP request and response cycle">
+            <p>HTTP works as a request-response protocol — your browser requests a page and the server responds by sending it.</p>
         </div>
+
+        <h2>How HTTP Works</h2>
+        <p>The process is straightforward once you understand the request-and-response cycle:</p>
+        <ol>
+            <li>You type a website address into your browser, for example <code>http://www.example.com</code>.</li>
+            <li>Your browser sends an HTTP request to the web server asking for that page.</li>
+            <li>The web server receives the request and processes it.</li>
+            <li>The server sends back an HTTP response containing the web page content.</li>
+            <li>Your browser receives the response and displays the page on your screen.</li>
+        </ol>
+        <p>This entire process happens in a fraction of a second every time you visit a website.</p>
+
         <h2>HTTP Request Methods</h2>
+        <p>HTTP uses different types of requests depending on what action is needed:</p>
         <ul>
-            <li><strong>GET:</strong> Request data from the server (e.g., loading a webpage).</li>
-            <li><strong>POST:</strong> Submit data to the server (e.g., form submission).</li>
-            <li><strong>PUT:</strong> Update an existing resource.</li>
-            <li><strong>DELETE:</strong> Remove a resource.</li>
+            <li><strong>GET</strong> — used to request and retrieve a web page or data from the server. This is the most common method and is what happens when you simply visit a website.</li>
+            <li><strong>POST</strong> — used to send data to the server, for example when you submit a form or create an account.</li>
+            <li><strong>PUT</strong> — used to update existing information on the server.</li>
+            <li><strong>DELETE</strong> — used to remove a resource from the server.</li>
         </ul>
+
         <h2>Common HTTP Status Codes</h2>
+        <p>When a server responds to a request, it sends back a status code to tell the browser what happened. Some common ones you might have already seen are:</p>
         <ul>
-            <li><strong>200 OK:</strong> The request succeeded.</li>
-            <li><strong>301 Moved Permanently:</strong> The page has moved to a new URL.</li>
-            <li><strong>403 Forbidden:</strong> Access denied.</li>
-            <li><strong>404 Not Found:</strong> The requested resource doesn't exist.</li>
-            <li><strong>500 Internal Server Error:</strong> The server encountered an error.</li>
+            <li><strong>200 OK</strong> — the request was successful and the page loaded correctly.</li>
+            <li><strong>301 Moved Permanently</strong> — the page has been moved to a different URL.</li>
+            <li><strong>403 Forbidden</strong> — you do not have permission to access this page.</li>
+            <li><strong>404 Not Found</strong> — the page you are looking for does not exist on the server.</li>
+            <li><strong>500 Internal Server Error</strong> — something went wrong on the server's side.</li>
         </ul>
-        <h2>HTTP vs. HTTPS</h2>
-        <p>HTTPS encrypts data between your browser and the server, protecting it from eavesdropping. Always use HTTPS for sensitive info like passwords or credit cards.</p>
+
+        <h2>HTTP vs HTTPS</h2>
+        <p><strong>HTTPS</strong> is the secure version of HTTP. The "S" stands for Secure. HTTPS encrypts the data being sent between your browser and the server, which means that even if someone intercepts it, they cannot read it.</p>
+        <ul>
+            <li><strong>HTTP</strong> — data is sent in plain text, which can be read if intercepted.</li>
+            <li><strong>HTTPS</strong> — data is encrypted using SSL/TLS, making it much safer.</li>
+        </ul>
+        <p>You should always look for <code>https://</code> in the address bar, especially when entering personal information like passwords or banking details. Most modern websites now use HTTPS by default.</p>
+
+        <p>To summarize, HTTP is the foundation of how web pages are delivered to us. It is the protocol that enables communication between web browsers and web servers, and it does this through a simple but effective request-and-response process.</p>
     </div>
+
     <footer>
         <p>Internet Terminology Project &copy; 2026</p>
     </footer>
