@@ -6,27 +6,29 @@
     <title>DNS - Internet Terminology</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; background: #f0f4f8; color: #333; }
-        header { background: #1a3c5e; color: white; padding: 30px; text-align: center; }
+        body { font-family: Arial, sans-serif; background: #f4f1fb; color: #2c2c2a; }
+        header { background: #3c3489; color: white; padding: 30px; text-align: center; }
         header h1 { font-size: 2.5em; }
-        nav { background: #2d6a9f; padding: 15px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 8px; display: inline-block; background: #1a3c5e; padding: 8px 14px; border-radius: 5px; font-size: 0.9em; }
-        nav a:hover { background: #f0a500; }
+        header p { margin-top: 6px; font-size: 1em; opacity: 0.85; }
+        nav { background: #534ab7; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 6px; display: inline-block; background: #3c3489; padding: 8px 14px; border-radius: 5px; font-size: 0.85em; }
+        nav a:hover { background: #ef9f27; color: #2c2c2a; }
         .content { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        .content h2 { font-size: 2em; color: #1a3c5e; margin-bottom: 15px; }
+        .content h2 { font-size: 1.7em; color: #3c3489; margin: 30px 0 12px; }
         .content p { font-size: 1.05em; line-height: 1.8; margin-bottom: 15px; }
-        .content ul { margin: 10px 0 15px 25px; }
-        .content ul li { margin-bottom: 8px; line-height: 1.7; }
-        .highlight { background: #e8f0fe; border-left: 4px solid #2d6a9f; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .content ul, .content ol { margin: 10px 0 15px 25px; }
+        .content li { margin-bottom: 8px; line-height: 1.7; }
+        .highlight { background: #eeedfe; border-left: 4px solid #534ab7; padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
         .img-box { text-align: center; margin: 30px 0; }
-        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        footer { background: #1a3c5e; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        .img-box img { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+        .img-box p { margin-top: 10px; font-size: 0.9em; color: #5f5e5a; }
+        footer { background: #3c3489; color: white; text-align: center; padding: 20px; margin-top: 40px; }
     </style>
 </head>
 <body>
     <header>
-        <h1>🔍 DNS</h1>
-        <p>Domain Name System / Domain Name Server</p>
+        <h1>&#128269; DNS</h1>
+        <p>Domain Name System</p>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -47,52 +49,70 @@
         <a href="web3.html">Web 3.0</a>
         <a href="web4.html">Web 4.0</a>
     </nav>
+
     <div class="content">
         <h2>What is DNS?</h2>
-        <p><strong>DNS (Domain Name System)</strong> is often called the "phonebook of the internet." It translates human-friendly domain names (like www.google.com) into machine-readable IP addresses (like 142.250.190.46) that computers use to find each other.</p>
+        <p>DNS stands for <strong>Domain Name System</strong>. The easiest way I can describe it is that it works like the internet's phonebook. Just like how a phonebook maps a person's name to their phone number, DNS maps a website's name to its IP address.</p>
+        <p>Instead of having to remember a long and confusing number like <code>142.250.190.46</code>, DNS lets you simply type <code>www.google.com</code> and it does the translation for you behind the scenes. This makes it much easier for everyday users to access websites using simple, readable names.</p>
+
         <div class="highlight">
-            <strong>Key Fact:</strong> Without DNS, you would have to remember long strings of numbers (IP addresses) for every website you want to visit.
+            <strong>In simple terms:</strong> DNS translates domain names into IP addresses so that browsers can load websites. Without it, you would need to memorise long strings of numbers just to visit a website.
         </div>
+
         <div class="img-box">
             <img src="images/dns.jpg" alt="DNS resolution diagram">
-            <p>DNS servers work behind the scenes every time you type a web address.</p>
+            <p>Every time you type a website address, DNS is working in the background to find the right IP address.</p>
         </div>
+
         <h2>How DNS Works (Step by Step)</h2>
+        <p>When you type a website address into your browser, here is what happens:</p>
         <ol>
-            <li>You type <code>www.example.com</code> into your browser.</li>
-            <li>Your computer asks a DNS resolver (usually provided by your ISP or a public DNS like 8.8.8.8).</li>
-            <li>The resolver checks its cache; if not found, it queries root name servers.</li>
-            <li>Root servers point to Top-Level Domain (TLD) servers (e.g., .com, .org).</li>
-            <li>TLD servers point to authoritative name servers for the specific domain.</li>
-            <li>The authoritative server returns the IP address for <code>example.com</code>.</li>
-            <li>Your browser then connects to that IP address and loads the website.</li>
+            <li>You type something like <code>www.example.com</code> into your browser.</li>
+            <li>Your computer contacts a DNS resolver — usually provided by your internet service provider or a public DNS like Google's <code>8.8.8.8</code>.</li>
+            <li>The resolver checks if it already knows the answer from a previous lookup (this is called the cache).</li>
+            <li>If not found, it asks a root name server, which points it in the right direction.</li>
+            <li>The root server sends it to a TLD (Top-Level Domain) server, like one that handles all <code>.com</code> addresses.</li>
+            <li>The TLD server then points to the authoritative name server for that specific domain.</li>
+            <li>The authoritative server finally gives back the correct IP address.</li>
+            <li>Your browser uses that IP address to connect to the website and load it for you.</li>
         </ol>
+
         <h2>Types of DNS Servers</h2>
         <ul>
-            <li><strong>DNS Resolver (Recursive Resolver):</strong> Handles the client's request and does the legwork to find the IP.</li>
-            <li><strong>Root Name Server:</strong> The top of the DNS hierarchy (13 logical root servers worldwide).</li>
-            <li><strong>TLD Name Server:</strong> Manages domains for specific extensions (.com, .org, .uk).</li>
-            <li><strong>Authoritative Name Server:</strong> The final source of truth for a domain's IP address.</li>
+            <li><strong>DNS Resolver:</strong> This is the first stop. It takes your request and does all the searching on your behalf.</li>
+            <li><strong>Root Name Server:</strong> Sits at the top of the DNS hierarchy. There are 13 logical root servers around the world.</li>
+            <li><strong>TLD Name Server:</strong> Handles domains based on their extension — like <code>.com</code>, <code>.org</code>, or <code>.co.ke</code>.</li>
+            <li><strong>Authoritative Name Server:</strong> The final source that holds the actual IP address for a specific domain.</li>
         </ul>
+
         <h2>Common DNS Record Types</h2>
         <ul>
-            <li><strong>A Record:</strong> Maps a domain to an IPv4 address.</li>
-            <li><strong>AAAA Record:</strong> Maps a domain to an IPv6 address.</li>
-            <li><strong>CNAME Record:</strong> Aliases one domain to another (e.g., www.example.com → example.com).</li>
-            <li><strong>MX Record:</strong> Specifies mail servers for email delivery.</li>
-            <li><strong>TXT Record:</strong> Holds text information (often for verification or security).</li>
-            <li><strong>NS Record:</strong> Indicates which name servers are authoritative for the domain.</li>
+            <li><strong>A Record:</strong> Links a domain name to an IPv4 address.</li>
+            <li><strong>AAAA Record:</strong> Links a domain name to an IPv6 address.</li>
+            <li><strong>CNAME Record:</strong> Points one domain to another domain name.</li>
+            <li><strong>MX Record:</strong> Tells the internet where to send emails for a domain.</li>
+            <li><strong>TXT Record:</strong> Stores text information, often used for security verification.</li>
+            <li><strong>NS Record:</strong> Tells you which name servers are in charge of a domain.</li>
         </ul>
-        <h2>Public DNS Providers vs. ISP Default</h2>
-        <p>Many people use public DNS for speed and privacy: <strong>Google DNS (8.8.8.8, 8.8.4.4)</strong>, <strong>Cloudflare DNS (1.1.1.1)</strong>, <strong>OpenDNS</strong>. They can be faster and more reliable than your ISP's default DNS.</p>
+
+        <h2>Popular Public DNS Providers</h2>
+        <p>You do not have to use your internet provider's default DNS. Many people switch to public DNS servers for better speed and privacy. Some popular ones are:</p>
+        <ul>
+            <li><strong>Google DNS:</strong> 8.8.8.8 and 8.8.4.4</li>
+            <li><strong>Cloudflare DNS:</strong> 1.1.1.1 — known for being very fast and privacy-focused</li>
+            <li><strong>OpenDNS:</strong> Offers extra filtering and parental controls</li>
+        </ul>
+
         <h2>DNS Security Threats</h2>
         <ul>
-            <li><strong>DNS Spoofing / Cache Poisoning:</strong> Attackers inject false DNS records to redirect users to fake sites.</li>
-            <li><strong>DNS Tunneling:</strong> Hiding non-DNS traffic inside DNS queries to bypass firewalls.</li>
-            <li><strong>DNSSEC (Domain Name System Security Extensions):</strong> A security protocol that signs DNS records to verify authenticity.</li>
+            <li><strong>DNS Spoofing:</strong> Attackers feed fake DNS records so users get sent to the wrong website without knowing.</li>
+            <li><strong>DNS Tunneling:</strong> Hiding other types of traffic inside DNS requests to sneak past firewalls.</li>
+            <li><strong>DNSSEC:</strong> A security extension that digitally signs DNS records so you can trust the results are genuine.</li>
         </ul>
-        <p>Without DNS, the internet as we know it would be impossible to use. It's one of the most critical but invisible components of online life.</p>
+
+        <p>DNS is one of those things most people never think about, but it is running every single time you go online. Without it, the internet would be almost impossible to use for normal people.</p>
     </div>
+
     <footer>
         <p>Internet Terminology Project &copy; 2026</p>
     </footer>
